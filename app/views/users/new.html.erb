@@ -1,6 +1,11 @@
 <div class="col-md-4 mx-auto form">
 <h1 class="mb-3 h3 font-weight-normal">Sign Up</h1>
     <%= bootstrap_form_for @user do |f| %>
+      <% if @user.errors.any? %>
+          <% @user.errors.full_messages.each do |msg|%>
+                <div class="alert alert-danger"><%= msg %></div>
+            <% end %>
+        <% end %>
       <%= f.text_field :first_name, hide_label: true, placeholder: "First Name"%>
       <%= f.text_field :last_name, hide_label: true, placeholder: "Last Name"%>
 

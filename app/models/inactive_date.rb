@@ -1,0 +1,2 @@
+class InactiveDate < ApplicationRecord
+end

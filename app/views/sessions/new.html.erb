@@ -2,9 +2,13 @@
 <h1 class="mb-3 h3 font-weight-normal">Sign In</h1>
 
     <%= bootstrap_form_tag url: '/login' do |f| %>
-    <%= f.text_field :email, hide_label: true, placeholder: "Email" %>
-    <%= f.password_field :password, hide_label: true, placeholder: "Password" %>
-    <%= f.submit "Login", class: "btn btn-primary btn-lg btn-block"%>
+        <%= f.text_field :email, hide_label: true, placeholder: "Email" %>
+        <%= f.password_field :password, hide_label: true, placeholder: "Password" %>
+        <%= f.submit "Login", class: "btn btn-primary btn-lg btn-block"%>  
+    <% end %>
+    <p class="c-a">
+        Don't have an account? Sign up
+        <%= link_to "here", '/users/new', method: :get, :class => "badge badge-info badge-pill"%>
+    </p>
 
 </div>
-<% end %>

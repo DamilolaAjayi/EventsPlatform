@@ -17,7 +17,9 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if(@event.save)
-      puts @event.fee
+      #testing the fee/paid event highlight feature wtih the below code
+      #@costTracker = CostTracker.find_by(fee: params[:fee])
+ 
         redirect_to '/events'
     else
         render 'new'

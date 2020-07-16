@@ -1,0 +1,2 @@
+module CostTrackerHelper
+end

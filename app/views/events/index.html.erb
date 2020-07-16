@@ -1,6 +1,7 @@
 <%= render 'partials/loggedinpage' %>
 <h1>All Events</h1>
 <% @events.each do |event| %>
+
 <div class="card m-4" style="width: 18rem; float:left;">
      <div class="card-body">
       <h3><%= event.title %> </h3>

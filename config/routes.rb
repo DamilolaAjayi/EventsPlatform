@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cost_tracker/create'
   resources :users, only: [:new, :create]
   resources :events
   root 'pages#index', as: 'home'
