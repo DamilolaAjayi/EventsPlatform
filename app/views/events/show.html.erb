@@ -1,0 +1,22 @@
+<%= render 'partials/loggedinpage' %>
+
+<div class="card-b mx-auto col-md-4">
+    <div class="classHeader my-4">
+         <h4><%= @event.title %>
+        <span style="float:right">
+         <%= link_to "Edit", edit_event_path(@event), :class => 'badge badge-secondary' %>
+
+         <%= link_to "Delete", event_path(@event), 
+                method: :delete, 
+                data: {confirm: 'Are you sure?'}, 
+                :class => 'badge badge-danger' %>
+         </span>
+         </h4>
+    </div>
+    <div class="cardBody">
+        <p><%= @event.details %></p>
+        <p>This event starts at <%= @event.start_date %> </p>
+        <p>It ends on <%= @event.end_date %> </p>
+        <p>Location is <%= @event.location %></p>
+    </div>
+</div>

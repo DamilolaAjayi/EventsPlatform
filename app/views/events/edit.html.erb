@@ -1,0 +1,18 @@
+<%= render 'partials/loggedinpage' %>
+
+<div class="col-md-4 mx-auto">
+    <h1 class="mb-3 h3 font-weight-normal">Edit Event</h1>
+    <%= bootstrap_form_for :event, url: event_path(@event), method: :patch do |f|%>
+        <% if @event.errors.any? %>
+            <% @event.errors.full_messages.each do |msg|%>
+                <div class="alert alert-danger"><%= msg %></div>
+            <% end %>
+        <% end %>
+        <%= f.text_field(:title) %>
+        <%= f.text_area(:details) %>
+            <%= f.datetime_field(:start_date, inline: true) %>
+            <%= f.datetime_field(:end_date, inline: true) %>
+        <%= f.text_area(:location) %> 
+        <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
+</div>
+<% end %>

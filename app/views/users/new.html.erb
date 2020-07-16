@@ -1,0 +1,11 @@
+<div class="col-md-4 mx-auto form">
+<h1 class="mb-3 h3 font-weight-normal">Sign Up</h1>
+    <%= bootstrap_form_for @user do |f| %>
+      <%= f.text_field :first_name, hide_label: true, placeholder: "First Name"%>
+      <%= f.text_field :last_name, hide_label: true, placeholder: "Last Name"%>
+
+    <%= f.email_field :email, hide_label: true, placeholder: "hey@example.com"%>
+    <%= f.password_field :password, hide_label: true, placeholder: "Password" %>
+    <%= f.submit "Get Started", class: "btn btn-primary btn-lg btn-block" %>
+</div>
+<% end %>

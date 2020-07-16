@@ -1,0 +1,10 @@
+<div class="col-md-4 mx-auto form">
+<h1 class="mb-3 h3 font-weight-normal">Sign In</h1>
+
+    <%= bootstrap_form_tag url: '/login' do |f| %>
+    <%= f.text_field :email, hide_label: true, placeholder: "Email" %>
+    <%= f.password_field :password, hide_label: true, placeholder: "Password" %>
+    <%= f.submit "Login", class: "btn btn-primary btn-lg btn-block"%>
+
+</div>
+<% end %>

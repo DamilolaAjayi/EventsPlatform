@@ -1,0 +1,12 @@
+ <nav class="navbar navbar-expand-lg navbar-default bg-light">
+    <div class="container">
+      <a class="navbar-brand"><%= link_to "Home", events_path %> </a>
+
+        <ul class="navbar-nav ml-5 mr-auto">
+          <li><%= link_to "Create Event", new_event_path %> </li>
+        </ul>
+          <%= button_to "Login", '/login', method: :get, :class => 'btn btn-light badge-pill'%>  
+          <%= button_to "Sign Up", '/users/new', method: :get, :class => 'btn btn-info badge-pill'%>
+
+    </div>
+  </nav>

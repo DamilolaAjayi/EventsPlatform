@@ -1,0 +1,13 @@
+<%= render 'partials/loggedinpage' %>
+<div class="col-md-4 mx-auto">
+    <h1 class="mb-3 h3 font-weight-normal">Create New Event</h1>
+    <%= bootstrap_form_for(@event) do |f| %>
+        <%= f.text_field(:title) %>
+        <%= f.text_area(:details) %>
+        <%= f.text_field(:location) %> 
+        <%= f.datetime_field(:start_date) %>
+        <%= f.datetime_field(:end_date) %>
+        <%= f.check_box :fee, label: "Free" %>
+        <%= f.submit "Create Event", class: "btn btn-primary btn-lg btn-block" %>
+</div>
+<% end %>
