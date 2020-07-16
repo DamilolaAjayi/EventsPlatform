@@ -1,24 +1,6 @@
-# README
+# EVENTS PLATFORM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create, Read, Edit, and Delete events.
 
-Things you may want to cover:
+Users would have to sign up to access the website features.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
